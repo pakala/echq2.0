@@ -25,7 +25,8 @@
   </div> -->
   <div class="field">
     <%= f.label :recipient_id %><br>
-    <%= f.text_field :recipient_id %>
+    <!-- <%= f.text_field :recipient_id %> -->
+    <%= collection_select(:cheque, :recipient_id, Recipient.all, :id, :recipient_name, prompt: true) %>
   </div>
   <div class="actions">
     <%= f.submit %>

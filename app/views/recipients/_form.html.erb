@@ -14,12 +14,20 @@
   <div class="field">
     <%= f.label :recipient_name %><br>
     <%= f.text_field :recipient_name %>
-  </div>
+    </div>
   <div class="field">
     <%= f.label :customer_id %><br>
-    <%= f.text_field :customer_id %>
+    <!-- <%= f.text_field :customer_id %> -->
+    <%= collection_select(:recipint, :customer_id, Customer.all, :id, :cust_name, prompt: true) %>
+
   </div>
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+
+
+<!-- class Recipient < ActiveRecord::Base
+  has_many :chequs, dependent: :destroy 
+  belongs_to :customer
+end -->

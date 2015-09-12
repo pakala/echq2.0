@@ -67,7 +67,7 @@ class ChequesController < ApplicationController
     # Use Humanize gem to convert amount in numbers to amount in words
     def wordify_amount(amount)
       dollar, cents = amount.to_s.split('.')
-      dollar.to_i.humanize.gsub("-", " ").gsub(" and ", " ").gsub(",", "").titleize + " Dollars and " + cents.to_i.humanize.gsub("-", " ").titleize + " Cents only---"
+      dollar.to_i.humanize.gsub("-", " ").gsub(" and ", " ").gsub(",", "").titleize + " Dollars and " + cents.to_i.humanize.gsub("-", " ").titleize + " Cents only."
     end
     # Use callbacks to share common setup or constraints between actions.
     def set_cheque
