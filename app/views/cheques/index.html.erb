@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Cheques</h1>
+<form>
+  Select Recipient:
+  <%= collection_select(:cheque, :recipient_id, Recipient.all, :id, :recipient_name, prompt: true) %>
+  <input type="submit" value="Filter">
+</form>
 
 <table>
   <thead>
@@ -20,9 +25,9 @@
         <td><%= cheque.amount %></td>
         <td><%= cheque.amount_text %></td>
         <td><%= cheque.recipient.recipient_name %></td>
-        <td><%= link_to 'Show', cheque %></td>
+        <!-- <td><%= link_to 'Show', cheque %></td>
         <td><%= link_to 'Edit', edit_cheque_path(cheque) %></td>
-        <td><%= link_to 'Destroy', cheque, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', cheque, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
       </tr>
     <% end %>
   </tbody>

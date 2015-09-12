@@ -4,7 +4,16 @@ class ChequesController < ApplicationController
   # GET /cheques
   # GET /cheques.json
   def index
-    @cheques = Cheque.all
+    begin 
+      rid = (params["cheque"]["recipient_id"]).to_i
+      if rid > 0
+        @cheques = Cheque.where(recipient_id: rid)
+      else
+        @cheques = Cheque.all
+      end
+    rescue NoMethodError
+      @cheques = Cheque.all
+    end
   end
 
   # GET /cheques/1
@@ -78,4 +87,4 @@ class ChequesController < ApplicationController
     def cheque_params
       params.require(:cheque).permit(:date, :amount, :recipient_id)
     end
-end
+  end
