@@ -25,6 +25,8 @@ class ChequesController < ApplicationController
   # POST /cheques.json
   def create
     @cheque = Cheque.new(cheque_params)
+    @cheque.amount_text = wordify_amount(@cheque.amount)
+    puts @cheque.amount_text
 
     respond_to do |format|
       if @cheque.save
@@ -62,6 +64,11 @@ class ChequesController < ApplicationController
   end
 
   private
+    # Use Humanize gem to convert amount in numbers to amount in words
+    def wordify_amount(amount)
+      dollar, cents = amount.to_s.split('.')
+      dollar.to_i.humanize.gsub("-", " ").gsub(" and ", " ").gsub(",", "").titleize + " Dollars and " + cents.to_i.humanize.gsub("-", " ").titleize + " Cents only---"
+    end
     # Use callbacks to share common setup or constraints between actions.
     def set_cheque
       @cheque = Cheque.find(params[:id])
@@ -69,6 +76,6 @@ class ChequesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def cheque_params
-      params.require(:cheque).permit(:date, :amount, :amount_text, :recipient_id)
+      params.require(:cheque).permit(:date, :amount, :recipient_id)
     end
 end
