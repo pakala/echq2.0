@@ -17,7 +17,7 @@
 
 <p>
   <strong>Recipient:</strong>
-  <%= @cheque.recipient %>
+  <%= @cheque.recipient.recipient_name %>
 </p>
 
 <%= link_to 'Edit', edit_cheque_path(@cheque) %> |
