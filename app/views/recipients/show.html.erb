@@ -1,14 +1,19 @@
-<p id="notice"><%= notice %></p>
+<div id="main-container" class="container">
 
-<p>
-  <strong>Recipient name:</strong>
-  <%= @recipient.recipient_name %>
-</p>
+	<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Customer:</strong>
-  <%= @recipient.customer %>
-</p>
+	<p>
+	  <strong>Recipient name:</strong>
+	  <%= @recipient.recipient_name %>
+	</p>
 
-<%= link_to 'Edit', edit_recipient_path(@recipient) %> |
-<%= link_to 'Back', recipients_path %>
+	<p>
+	  <strong>Customer:</strong>
+	  <%= @recipient.customer.customer_id %>
+	</p>
+
+	<p class="nav_link">
+		<%= link_to 'Edit', edit_recipient_path(@recipient) %> |
+		<%= link_to 'Back', recipients_path %>
+	</p>	
+</div>

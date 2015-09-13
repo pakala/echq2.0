@@ -1,9 +1,14 @@
-<p id="notice"><%= notice %></p>
+<div id="main-container" class="container">
 
-<p>
-  <strong>Cust name:</strong>
-  <%= @customer.cust_name %>
-</p>
+	<p id="notice"><%= notice %></p>
 
-<%= link_to 'Edit', edit_customer_path(@customer) %> |
-<%= link_to 'Back', customers_path %>
+	<p>
+	  <strong>Cust name:</strong>
+	  <%= @customer.cust_name %>
+	</p>
+
+	<p class="nav_link">
+		<%= link_to 'Edit', edit_customer_path(@customer) %> |
+		<%= link_to 'Back', customers_path %>
+	</p>	
+</div>
