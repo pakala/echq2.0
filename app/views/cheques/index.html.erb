@@ -26,9 +26,9 @@
 	  <tbody>
 	    <% @cheques.each do |cheque| %>
 	      <tr>
-	        <td><%= cheque.date %></td>
-	        <td><%= cheque.amount %></td>
-	        <td><%= cheque.amount_text %></td>
+	        <td><%= cheque.date.strftime('%x') %></td>
+	        <td>$<%= cheque.amount%></td>
+	        <td><a href=""><%= cheque.amount_text %></a></td>
 	        <td><%= cheque.recipient.recipient_name %></td>
 	        <!-- <td><%= link_to 'Show', cheque %></td>
 	        <td><%= link_to 'Edit', edit_cheque_path(cheque) %></td>
