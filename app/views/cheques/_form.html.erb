@@ -12,25 +12,28 @@
   <% end %>
 
   <form role="form"> 
+
+    <div class="m-l form-group">
+      <%= f.label :recipient_id %>
+      <!-- <%= f.text_field :recipient_id %> -->
+      <%= collection_select(:cheque, :recipient_id, Recipient.all, :id, :recipient_name, prompt: true, :class =>'form-control') %>
+    </div>
+    
     <div class="form-group">
       <%= f.label :date %><br>
       <%= f.date_select :date %>
     </div>
   
     
-    <div class="form-group">
-      <%= f.label :amount %><br>
-      <%= f.text_field :amount %>
+    <div class="input-group">
+      <span class="input-group-addon">$</span>
+      <%= f.text_field :amount, class: 'form-control', placeholder: "Enter Cheque Amount" %>
     </div>
     <!-- <div class="field">
       <%= f.label :amount_text %><br>
       <%= f.text_field :amount_text %>
     </div> -->
-    <div class="form-group">
-      <%= f.label :recipient_id %><br>
-      <!-- <%= f.text_field :recipient_id %> -->
-      <%= collection_select(:cheque, :recipient_id, Recipient.all, :id, :recipient_name, prompt: true) %>
-    </div>
+    
     <div class="action">
       <%= f.submit %>
     </div>

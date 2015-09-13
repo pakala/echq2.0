@@ -28,7 +28,7 @@
 	      <tr>
 	        <td><%= cheque.date.strftime('%x') %></td>
 	        <td>$<%= cheque.amount%></td>
-	        <td><a href=""><%= cheque.amount_text %></a></td>
+	        <td><a href="/cheques/<%= cheque.id %>"><%= cheque.amount_text %></a></td>
 	        <td><%= cheque.recipient.recipient_name %></td>
 	        <!-- <td><%= link_to 'Show', cheque %></td>
 	        <td><%= link_to 'Edit', edit_cheque_path(cheque) %></td>
