@@ -9,7 +9,7 @@ class ChequesController < ApplicationController
       if rid > 0
         @cheques = Cheque.where(recipient_id: rid)
       else
-        @cheques = Cheque.all
+        @cheques = Cheque.all 
       end
     rescue NoMethodError
       @cheques = Cheque.all
@@ -35,7 +35,6 @@ class ChequesController < ApplicationController
   def create
     @cheque = Cheque.new(cheque_params)
     @cheque.amount_text = wordify_amount(@cheque.amount)
-    puts @cheque.amount_text
 
     respond_to do |format|
       if @cheque.save

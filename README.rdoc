@@ -22,7 +22,21 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
-
+== THINGS TO DO
+= Additional features that can be added to enhance the app
+- Authentication
+- Cheques as PDF
+- Cheque templates
+- Recurring Cheques
+- Support multiple accounts (for sourcing the funds)
+- Forex cheques (including forex conversions)
+- Digital Signatures
+- Better validation
+- Email notifications to cheque issuer (when cheque is deposited/encashed)
+- Cancel cheques
+- Link to Bank
+- Reports
+- Cheque amount limits based on user
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
