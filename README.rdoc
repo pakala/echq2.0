@@ -1,27 +1,15 @@
 == README
+This is a Ruby on Rails sample application which allows a user to create electronic cheques.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+When a user(customer / issuer), enters the following :Recipient Name, Date, nominal value (amount in numbers), eg.123.45, the application should convert and display amount in words(One Hundred Twenty Three Dollars and Forty Five Cents.) along with Recipient Name and Date.
 
-Things you may want to cover:
 
-* Ruby version
+User Stories:
+* Creating a new cheque
+* Listing all cheques
+* Filtering cheques by Recipient
+* Viewing a cheque
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
 == THINGS TO DO
 = Additional features that can be added to enhance the app
 - Authentication
@@ -39,9 +27,6 @@ Things you may want to cover:
 - Cheque amount limits based on user
 
 == TOOLS
-=CI : Semaphore
-=Push notifications : Slack
-=Deployment : Heroku app
+-CI : Semaphore
+-Deployment : Heroku app
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.

@@ -24,6 +24,13 @@ class ChequesControllerTest < ActionController::TestCase
     assert_redirected_to cheque_path(assigns(:cheque))
   end
 
+  test "should convert amount to amount in words" do
+    chqCtrl = ChequesController.new
+    text = chqCtrl.wordify_amount(120.00)
+    assert_equal text, "One Hundred Twenty Dollars and Zero Cents only."
+    
+    end
+
   test "should show cheque" do
     get :show, id: @cheque
     assert_response :success
@@ -46,4 +53,6 @@ class ChequesControllerTest < ActionController::TestCase
 
     assert_redirected_to cheques_path
   end
+
+
 end
