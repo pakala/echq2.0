@@ -11,7 +11,7 @@ User Stories:
 * Viewing a cheque
 
 == THINGS TO DO
-= Additional features that can be added to enhance the app
+===Additional features that can be added to enhance the app
 - Authentication
 - Cheques as PDF
 - Cheque templates
@@ -27,6 +27,6 @@ User Stories:
 - Cheque amount limits based on user
 
 == TOOLS
--CI : Semaphore
--Deployment : Heroku app
+* CI : Semaphore
+* Deployment : Heroku app
 
