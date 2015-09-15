@@ -30,3 +30,21 @@ User Stories:
 * CI : Semaphore
 * Deployment : Heroku app
 
+=== Acknowledgements
+* Stackoverflow - All those guys who took time to answer & clarify questions over time
+* www.w3schools.com
+* www.getbootstrap.com
+* Ryan Bigg for 'Humanize' gem - To convert amount to amount in words
+* www.learneroo.com - Rails tutorials
+* www.gotealeaf.com - Integrating rails and bootstrap
+* Akshay Mohite @ https://hackhands.com - Format date time in ruby
+* Samer Buna @ www.pluralsight.com - ruby on rails 4 tutorials
+* Jordan Hudgens @ www.udemy.com - Comprehesive Ruby On Rails
+* guides.rubyonrails.org
+* www.tutorialspoint.com - Ruby on Rails Models
+* www.railscasts.com - associations in Rails
+* Sang Shin @ www.jpassion.com - Ruby on Rails course (youtube)
+* www.minspill.net - rake tasks cheat sheet
+* www.tutorials.railsapps.github.io - Ruby on Rails tutorials
+* www.color-hex.com - hex codes for css styling
+* Jan Varljen @ https://infinum.co - Setting up ROR continuous integration process

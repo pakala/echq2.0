@@ -28,7 +28,7 @@ class ChequesControllerTest < ActionController::TestCase
     chqCtrl = ChequesController.new
     text = chqCtrl.wordify_amount(120.00)
     assert_equal text, "One Hundred Twenty Dollars and Zero Cents only."
-    
+    assert_not_equal text, "Two Hundred Twenty Dollars and Zero Cents only."    
     end
 
   test "should show cheque" do
