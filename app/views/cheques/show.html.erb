@@ -4,7 +4,7 @@
 	<form class="show_form">
 		<p>
 
-		  <h3>e-cheque</h3>	
+		  <h3 class="headers">e-cheque</h3>	
 		  <div id="date">
 		  	<strong>Date:</strong>
 		  	<%= @cheque.date %>
@@ -12,17 +12,17 @@
 		</p>
 
 			<div>
-			  <strong style="float:left;">Amount:</strong>
-			  <p id="display_amt">$<%= @cheque.amount %></p>
+			  <strong style="float:left;">Amount: </strong>
+			  <p id="display_amt"><strong>$</strong><%= number_with_precision(@cheque.amount, :precision => 2, :delimiter => ',') %></p>
 			</div>  
 
 			<div id="display_amount_txt">
-			  <strong style="float:left;">Amount text:</strong>
+			  <strong style="float:left;">Amount text: </strong>
 			  <p id="display_amt"><%= @cheque.amount_text %></p>
 			</div>
 
 			<div id="display_recp_name">
-			  <strong style="float:left;">Recipient:</strong>
+			  <strong style="float:left;">Recipient: </strong>
 			  <p id="display_amt"><%= @cheque.recipient.recipient_name %></p>
 			</div>  
 	</form>

@@ -10,8 +10,8 @@ User Stories:
 * Filtering cheques by Recipient
 * Viewing a cheque
 
-== THINGS TO DO
-===Additional features that can be added to enhance the app
+=== THINGS TO DO
+==== Additional features that can be added to enhance the app
 - Authentication
 - Cheques as PDF
 - Cheque templates
@@ -26,11 +26,11 @@ User Stories:
 - Reports
 - Cheque amount limits based on user
 
-== TOOLS
+=== TOOLS
 * CI : Semaphore
 * Deployment : Heroku app
 
-=== Acknowledgements
+==== Acknowledgements
 * Stackoverflow - All those guys who took time to answer & clarify questions over time
 * www.w3schools.com
 * www.getbootstrap.com

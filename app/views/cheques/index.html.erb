@@ -27,7 +27,7 @@
 	    <% @cheques.each do |cheque| %>
 	      <tr>
 	        <td><%= cheque.date.strftime('%x') %></td>
-	        <td>$<%= cheque.amount%></td>
+	        <td><strong>$</strong><%= number_with_precision(cheque.amount, :precision => 2, :delimiter => ',')%></td>
 	        <td><a href="/cheques/<%= cheque.id %>"><%= cheque.amount_text %></a></td>
 	        <td><%= cheque.recipient.recipient_name %></td>
 	        <!-- <td><%= link_to 'Show', cheque %></td>
