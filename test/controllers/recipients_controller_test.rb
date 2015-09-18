@@ -37,6 +37,7 @@ class RecipientsControllerTest < ActionController::TestCase
   test "should update recipient" do
     patch :update, id: @recipient, recipient: { customer_id: @recipient.customer_id, recipient_name: @recipient.recipient_name }
     assert_redirected_to recipient_path(assigns(:recipient))
+    assert_response :redirect
   end
 
   test "should destroy recipient" do
