@@ -18,7 +18,7 @@
   <div class="field">
     <%= f.label :customer_id %><br>
     <!-- <%= f.text_field :customer_id %> -->
-    <%= collection_select(:recipint, :customer_id, Customer.all, :id, :cust_name, prompt: true) %>
+    <%= collection_select(:recipient, :customer_id, Customer.all, :id, :cust_name, prompt: true) %>
 
   </div>
   <div class="actions">

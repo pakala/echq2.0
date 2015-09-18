@@ -1,3 +1,13 @@
 // Place all the styles related to the Cheques controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#date {
+	text-align: left;
+    border: 2px solid;
+    height: 30px;
+    width: 200px;
+    float: right;
+}
+#display_amt {
+	text-decoration: underline;
+}

@@ -3,28 +3,32 @@
 
 	<form class="show_form">
 		<p>
-		  <strong>Date:</strong>
-		  <%= @cheque.date %>
+
+		  <h3>e-cheque</h3>	
+		  <div id="date">
+		  	<strong>Date:</strong>
+		  	<%= @cheque.date %>
+		  </div>
 		</p>
 
-		<p>
-		  <strong>Amount:</strong>
-		  $<%= @cheque.amount %>
-		</p>
+			<div>
+			  <strong style="float:left;">Amount:</strong>
+			  <p id="display_amt">$<%= @cheque.amount %></p>
+			</div>  
 
-		<p>
-		  <strong>Amount text:</strong>
-		  <%= @cheque.amount_text %>
-		</p>
+			<div id="display_amount_txt">
+			  <strong style="float:left;">Amount text:</strong>
+			  <p id="display_amt"><%= @cheque.amount_text %></p>
+			</div>
 
-		<p>
-		  <strong>Recipient:</strong>
-		  <%= @cheque.recipient.recipient_name %>
-		</p>
+			<div id="display_recp_name">
+			  <strong style="float:left;">Recipient:</strong>
+			  <p id="display_amt"><%= @cheque.recipient.recipient_name %></p>
+			</div>  
 	</form>
 
 	<p class="nav_link">
 		<!-- <%= link_to 'Edit', edit_cheque_path(@cheque) %> | -->
-		<%= link_to 'Back', cheques_path %>
+		<!-- <%= link_to 'Back', cheques_path %>? -->
 	</p>
 </div>
